@@ -1,6 +1,6 @@
 public class PartTime extends NhanVien {
     private int ngayLamViec;
-    public PartTime(String ten, int tuoi, String maNV, double luongCoBan, int ngayLamViec) {
+    public PartTime(String ten, int tuoi, int maNV, double luongCoBan, int ngayLamViec) {
         super(ten, tuoi, maNV, luongCoBan);
         this.ngayLamViec = ngayLamViec;
     }

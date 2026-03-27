@@ -1,12 +1,10 @@
 public class FullTime extends NhanVien {
     private String chucVu;
-    private double heSo;
     private double luongThuong;
-    public FullTime(String ten, int tuoi, String maNV,
-                    double luongCoBan, String chucVu, double heSo, double luongThuong) {
+    public FullTime(String ten, int tuoi, int maNV,
+                    double luongCoBan, String chucVu, double luongThuong) {
         super(ten, tuoi, maNV, luongCoBan);
         this.chucVu = chucVu;
-        this.heSo = heSo;
         this.luongThuong = luongThuong;
     }
     @Override
@@ -18,7 +16,7 @@ public class FullTime extends NhanVien {
     }
     @Override
     public double tinhLuong() {
-        double a = (getLuongCoBan() * this.heSo) + luongThuong;
+        double a = getLuongCoBan() + luongThuong;
         return a;
     }
 }

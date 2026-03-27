@@ -1,23 +1,12 @@
 import java.util.Scanner;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        QuanLy ql1 = new QuanLy();
-        NhanVien nv1 = new PartTime("duong", 18, "101", 120000, 16);
-        NhanVien nv2 = new PartTime("han", 19, "102", 130000, 18);
-        NhanVien nv3 = new PartTime("khoa", 18, "103", 350000, 30);
-        NhanVien nv4 = new FullTime("truong", 20, "104",
-                8400000, "quanLy", 2.5, 2000000);
-        NhanVien nv5 = new FullTime("minh", 21, "105",
-                8670000, "quanLyThongTin", 3.0, 3000000);
-        NhanVien nv6 = new FullTime("Nhan", 25, "106",
-                9400023, "quanLyNV", 1.6, 1000000);
-        ql1.themNV(nv1);
-        ql1.themNV(nv2);
-        ql1.themNV(nv3);
-        ql1.themNV(nv4);
-        ql1.themNV(nv5);
-        ql1.themNV(nv6);
         while(true) {
             System.out.println("-------------------------------------------------");
             System.out.println("-------------------------------------------------");
@@ -28,6 +17,7 @@ public class Main {
             System.out.println("0. dong chuong trinh");
             System.out.println("-------------------------------------------------------------");
             System.out.print("nhap lua chon cua ban: ");
+            Scanner sc = new Scanner(System.in);
             String luaChon = sc.nextLine();
             int choice = Integer.parseInt(luaChon);
             switch(choice) {

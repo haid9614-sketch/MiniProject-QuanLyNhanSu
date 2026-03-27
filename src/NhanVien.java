@@ -1,15 +1,15 @@
 public abstract class NhanVien {
     protected String ten;
     protected int tuoi;
-    protected String maNV;
+    protected int maNV;
     protected Double luongCoBan;
-    public NhanVien(String ten, int tuoi, String maNV, Double luongCoBan) {
+    public NhanVien(String ten, int tuoi, int maNV, Double luongCoBan) {
         this.ten = ten;
         this.tuoi = tuoi;
         this.maNV = maNV;
         this.luongCoBan = luongCoBan;
     }
-    public String getMaNV() {
+    public int getMaNV() {
         return this.maNV;
     }
     public double getLuongCoBan() {
