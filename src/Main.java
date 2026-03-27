@@ -32,7 +32,6 @@ public class Main {
                     break;
                 case 0:
                     System.exit(0);
-                default:
                     System.out.println("chuc nang khong hop le");
             }
 
