@@ -11,7 +11,7 @@ public class ThemNhanVien {
            try(PreparedStatement pr = conn.prepareStatement(sql)) {
                pr.setInt(1, maNV);
                pr.setString(2, "PartTime");
-               pr.setString(3, "ten");
+               pr.setString(3, ten);
                pr.setInt(4, tuoi);
                pr.setDouble(5, luongCoBan);
                pr.setInt(6, ngayLamViec);
@@ -36,10 +36,10 @@ public class ThemNhanVien {
             try(PreparedStatement pr = conn.prepareStatement(sql)) {
                 pr.setInt(1, maNV);
                 pr.setString(2, "FullTime");
-                pr.setString(3, "ten");
+                pr.setString(3, ten);
                 pr.setInt(4, tuoi);
                 pr.setDouble(5, luongCoBan);
-                pr.setString(6, "chucVu");
+                pr.setString(6, chucVu);
                 pr.setDouble(7, luongThuong);
                 int row = pr.executeUpdate();
                 if(row >= 0) {

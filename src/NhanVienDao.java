@@ -16,7 +16,7 @@ public class NhanVienDao {
                 try(ResultSet rs = pr.executeQuery()) {
                     while(rs.next()) {
                         String phanLoai = rs.getString("loai_NV");
-                        if(phanLoai == "PartTime") {
+                        if(phanLoai.equals("PartTime")) {
                             NhanVien nv1 = new PartTime(rs.getString("ten"), rs.getInt("tuoi"),
                                     rs.getInt("maNV"), rs.getDouble("luongCoBan"),
                                     rs.getInt("ngayLamViec"));

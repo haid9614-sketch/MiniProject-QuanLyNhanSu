@@ -13,10 +13,24 @@ public class TimKiemNhanVien {
                 try(ResultSet rs = pr.executeQuery()) {
                     while(rs.next()) {
                         int ma = rs.getInt("maNV");
+                        String loaiNV = rs.getString("loai_NV");
                         boolean co = false;
                         if(ma == maNV) {
-
-
+                            if(loaiNV.equals("PartTime")) {
+                                NhanVien nv1 = new PartTime(rs.getString("ten"), rs.getInt("tuoi"),
+                                        ma, rs.getDouble("luongCoBan"),
+                                        rs.getInt("ngayLamViec"));
+                                       nv1.display();
+                            } else {
+                                NhanVien nv2 = new FullTime(rs.getString("ten"), rs.getInt("tuoi"),
+                                        ma, rs.getDouble("luongCoBan"),
+                                        rs.getString("chucVu"), rs.getDouble("luongThuong"));
+                                        nv2.display();
+                                }
+                             co = true;
+                        }
+                        if(!co) {
+                            System.out.println("KHONG TIM THAY NHAN VIEN");
                         }
                     }
                 }
